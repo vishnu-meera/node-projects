@@ -1,0 +1,24 @@
+{
+  "name": "node_projects",
+  "version": "1.0.0",
+  "description": "read text files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "edge": "^7.10.1",
+    "edge-sql": "^0.1.2",
+    "find-in-files": "^0.4.0",
+    "moment": "^2.14.1",
+    "moment-timezone": "^0.5.4",
+    "msnodesqlv8": "^0.3.1",
+    "mssql": "^4.0.4",
+    "node-cron": "^1.1.1",
+    "nodemailer": "^0.7.1",
+    "npm-servicenow": "0.0.1"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DB-Reader</title>
+</head>
+<body>
+	<form id="contact_form" action="/Get" method="POST" enctype="multipart/form-data">
+		<div class="row">
+			<label for="store">Store Number</label><br />
+			<input id="store" class="input" name="store" type="number" value="" size="3" /><br />
+		</div>
+		<div class="row">
+			<label for="reg">Register number</label><br />
+			<input id="reg" class="input" name="reg" type="number" value="" size="2" /><br />
+		</div>
+		<div class="row">
+			<label for="tran">Transaction number</label><br />
+			<input id="tran" class="input" name="tran" type="number" value="" size="2" /><br />
+		</div>
+		<input id="submit_button" type="submit" value="Get" />
+	</form>						
+</body>
+</html>

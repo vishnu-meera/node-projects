@@ -1,0 +1,1 @@
+select * from event_log where event_start_time between to_date('20170724 00000','yyyymmdd HH24MISS') and to_date('20170725 000000','yyyymmdd HH24MISS') and status = 'failure'

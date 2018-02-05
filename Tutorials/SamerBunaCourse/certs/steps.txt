@@ -1,0 +1,11 @@
+wget https://raw.githubusercontent.com/anders94/https-authorized-clients/master/keys/ca.cnf
+
+
+openssl req -new -x509 -days 9999 -config ca.cnf -keyout ca-key.pem -out ca-crt.pem
+
+openssl genrsa -out server-key.pem 4096
+
+openssl req -new -config server.cnf -key server-key.pem -out server-csr.pem
+
+
+--https://engineering.circle.com/https-authorized-certs-with-node-js-315e548354a2

@@ -1,0 +1,61 @@
+all stream are eventemitters
+src.pine(dst)
+chain pipe a.pipe(b).pipe(c).pipe(d)
+b and c are duplex streams
+
+
+streams are implementing and consuming
+
+Readable streams
+
+events
+-data
+-end
+-error
+-close
+-readable
+
+functions
+
+pipe()
+unpipe()
+read()
+unshift()
+resume()
+pause()
+ispaused()
+setencoding()
+
+Writeable streams
+
+drain
+finish
+error
+close
+pipe/unpipe
+
+
+functions
+write()
+end()
+cork()
+uncork()
+setDefaultEncoding()
+
+paused mode and flowing mode
+ // req is an http.IncomingMessage, which is a Readable Stream
+  // res is an http.ServerResponse, which is a Writable Stream
+
+
+
+
+  Examples of Writable streams include:
+
+HTTP requests, on the client
+HTTP responses, on the server
+fs write streams
+zlib streams
+crypto streams
+TCP sockets
+child process stdin
+process.stdout, process.stderr

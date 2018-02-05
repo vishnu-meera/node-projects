@@ -1,0 +1,17 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "read text files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.14.1",
+    "moment-timezone": "^0.5.4",
+    "node-cron": "^1.1.1",
+    "nodemailer": "^0.7.1"
+  }
+}

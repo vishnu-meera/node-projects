@@ -1,0 +1,15 @@
+process
+process.version
+process.env
+process.release.lts
+Buffer.alloc(8)
+Buffer
+Buffer.allocUnsafe(8)
+Buffer.allocUnsafe(80).toString()
+Buffer.allocUnsafe(800).toString()
+const string = 'touche'
+const buffer = Buffer.from('touche');
+console.log(string, string.length)
+console.log(buffer, buffer.length)
+buffer[0]
+buffer[1]

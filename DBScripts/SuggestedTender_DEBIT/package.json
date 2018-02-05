@@ -1,0 +1,23 @@
+{
+  "name": "SuggestedTender_DEBIT",
+  "version": "1.0.0",
+  "description": "SqlServerReporting",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vishnu-Sankar/SqlServerReporting.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vishnu-Sankar/SqlServerReporting/issues"
+  },
+  "homepage": "https://github.com/Vishnu-Sankar/SqlServerReporting#readme",
+  "dependencies": {
+    "edge-ms-sql": "^0.1.3"
+  }
+}
