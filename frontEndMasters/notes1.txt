@@ -1,0 +1,73 @@
+1)Parallel Vs Async
+2)Callbacks
+3)Thunks
+4)Promises
+5)Generators/Corutines
+Event Reactive (obervable, RX.js)
+CSP->channel oriented concurrency
+
+
+parallelism
+-----------
+
+on a higer level parallelism and async are same.
+in a computing sense parallelism express through threads.
+@ any given instance if both same tasks carry out in two different cores @ the same time->honest parallelism
+since its not pissble...limitation of cores
+
+from developer perspective we dont care about this
+
+aynchorinisty
+------------
+single thread
+@ any given isntance one javascript code will run
+
+
+===========================================================
+inversion of control ->means part of my code that i am in control and part i am not in control
+
+
+Thunks
+======
+
+Promises (monard)
+========
+future value
+"completion and error events"
+its kind an event listener
+
+manage callbacks in a trusting manner
+flow control
+
+do firsthing
+	then do second thing
+	then do third thing
+end
+
+
+dofirst()
+.then(function(){
+	return dosecond();
+})
+
+
+immediately resolved promise
+
+new Promise(function executor(resolve){ resolved(); } );  === Promise.resolve()
+===============================================================================
+
+promise abstarctions-->promise gate (API is Promise.all)
+promise abstractions-->Promise.race
+
+
+use Promise abstractions
+more reading on Promises
+
+
+blog.getify.com/promises-part-1
+github.com/getify/native-promise-only
+
+get into source code of getify/asynquence
+
+
+
