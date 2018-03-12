@@ -30,7 +30,7 @@ inversion of control ->means part of my code that i am in control and part i am 
 Thunks
 ======
 
-Promises (monard)
+Promises (monard)->time independ wrapper around a value
 ========
 future value
 "completion and error events"
@@ -59,6 +59,7 @@ new Promise(function executor(resolve){ resolved(); } );  === Promise.resolve()
 promise abstarctions-->promise gate (API is Promise.all)
 promise abstractions-->Promise.race
 
+Promise.all ---- Promise.race
 
 use Promise abstractions
 more reading on Promises
@@ -68,6 +69,10 @@ blog.getify.com/promises-part-1
 github.com/getify/native-promise-only
 
 get into source code of getify/asynquence
+
+=============================================================================
+
+Promise + Generators
 
 
 
