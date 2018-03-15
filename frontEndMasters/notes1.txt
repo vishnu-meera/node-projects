@@ -75,4 +75,6 @@ get into source code of getify/asynquence
 Promise + Generators
 
 
+Generators is used to create a State machine
+its like a function which can pause and resume
 
