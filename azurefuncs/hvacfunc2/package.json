@@ -1,0 +1,18 @@
+{
+  "name": "hvacfunc2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@azure/storage-blob": "^10.3.0",
+    "avsc": "^5.4.7",
+    "buffer-crc32": "^0.2.13",
+    "save-file": "^2.3.1",
+    "snappy": "^6.1.2"
+  }
+}

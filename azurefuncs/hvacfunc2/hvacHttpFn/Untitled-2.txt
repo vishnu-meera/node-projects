@@ -1,0 +1,9 @@
+            try {
+                    //const type = avro.Type.forSchema({"type":"record","name":"Message","namespace":"Microsoft.Azure.Devices","fields":[{"name":"EnqueuedTimeUtc","type":"string"},{"name":"Properties","type":{"type":"map","values":"string"}},{"name":"SystemProperties","type":{"type":"map","values":"string"}},{"name":"Body","type":["null","bytes"]}]});
+                    
+                    const xxxxx = data.slice(5);
+                    context.log("bufferrrrr ===> ", type.fromBuffer(data))
+                    //type.decode(xxxxx)
+            } catch (error) {
+                context.log("============> error", error)  
+            }

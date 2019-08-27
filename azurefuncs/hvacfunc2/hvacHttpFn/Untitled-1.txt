@@ -1,0 +1,51 @@
+
+    try {
+
+        const buffer = Buffer.alloc( 24 * 1024);
+        await downloadBlobToBuffer(
+          Aborter.timeout(30 * 60 * 60 * 1000),
+          buffer,
+          blockBlobURL,
+          0,
+          undefined,
+          {
+            blockSize: 4 * 1024 * 1024, // 4MB block size
+            parallelism: 20, // 20 concurrency
+            progress: ev => context.log("evevevevevev====", ev)
+          }
+        );
+        // var wstream = fs.createWriteStream('myBinaryFile1');
+        // wstream.write(buffer);
+        // wstream.end();
+        var json  = JSON.stringify(buffer);
+        //context.log("avroResponse ===> ", JSON.stringify(buffer));
+        
+        let bufferOriginal = Buffer.from(JSON.parse(json).data);
+        //console.log(bufferOriginal.toString('utf8'));
+        //console.log(bufferOriginal);        
+        const blockDecoder = new avro.streams.BlockDecoder({
+            codecs: {
+                snappy: function (buffer, cb) {
+                // Avro appends checksums to compressed blocks.
+                const len = buffer.length;
+                const checksum = buffer.slice(len - 4, len);
+                snappy.uncompress(buffer.slice(0, len - 4), function (err, inflated) {
+                    if (err) {
+                        cb(err);
+                    return;
+                    }
+                    if (!checksum.equals(crc32(inflated))) {
+                        // We make sure that the checksum matches.
+                        cb(new Error('invalid checksum'));
+                        return;
+                    }
+                    cb(null, inflated);
+                });
+                }
+            }
+            });
+            //context.log(blockDecoder)
+            blockDecoder.on('data', function(record){context.log("record==== ", record)})
+    } catch (error) {
+        context.log("avroResponse ===> ", error);
+    }

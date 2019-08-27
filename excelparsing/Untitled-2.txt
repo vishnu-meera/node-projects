@@ -1,0 +1,34 @@
+{
+    "Office":
+        {"Engineering Readiness":
+            {"Status":"Live",
+            "actualdate":"23-Oct-12",
+            "planneddate":"23-Oct-12",
+            "startdate":"23-Oct-12"
+            }
+        ,"GA":
+            {"Status":"Live",
+            "actualdate":"May 2011",
+            "planneddate":"May 2011",
+            "startdate":"May 2011"}
+            },
+    "Azure":
+            {
+            "RTEG":
+                {"Status":"Live",
+                "actualdate":"22-Oct-12",
+                "planneddate":"22-Oct-12",
+                "startdate":"22-Oct-12"
+                },
+            "Preview":"NA",
+            "O365 Services":"",
+            "GA":{"Status":"Live","actualdate":"May 2011","planneddate":"May 2011","startdate":"May 2011"}},
+    "Infrastructure":
+            {"Public Announcement":"Yes",
+            "CAPEX Approved":{"Status":"Live","actualdate":"May 2011","planneddate":"May 2011","startdate":"May 2011"},
+            "Lease Signed":{"Status":"Live","actualdate":"20-Dec-11","planneddate":"20-Dec-11","startdate":"20-Dec-11"},
+            "TAM Award":{"Status":"Live","actualdate":"20-Dec-11","planneddate":"20-Dec-11","startdate":"20-Dec-11"},
+            "Colo Ready":{"Status":"Live","actualdate":"22-Oct-12","planneddate":"22-Oct-12","startdate":"22-Oct-12"},
+            "Dock Date":{"Status":"Live","actualdate":"22-Oct-12","planneddate":"22-Oct-12","startdate":"22-Oct-12"},
+            "RTEG Network":{"Status":"Live","actualdate":"22-Oct-12","planneddate":"22-Oct-12","startdate":"22-Oct-12"},
+            "RTEG Server":{"Status":"Live","actualdate":"22-Oct-12","planneddate":"22-Oct-12","startdate":"22-Oct-12"}}}

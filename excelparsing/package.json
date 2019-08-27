@@ -1,0 +1,24 @@
+{
+  "name": "excelparsing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "excel": "^1.0.0",
+    "exceljs": "^1.6.3",
+    "install": "^0.12.2",
+    "npm": "^6.4.1",
+    "xlsx": "^0.14.1",
+    "xlsx-to-json": "^0.3.0"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0"
+  }
+}

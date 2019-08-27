@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>My shopping List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/normalize.css" media="screen"/>
+    <link rel="stylesheet" href="css/foundation.min.css" media="screen"/>
+    <link rel="stylesheet" href="css/app-screen.css" media="screen"/>
+    <link rel="stylesheet" href="css/app-print.css" media="print"/>
+    <script src="js/angular.min.js"></script>
+    <script src="js/shopping-list.js"></script>
+</head>
+<body ng-controller="shoppinglistController">
+
+    <div class="row">
+        <div class="column">
+            <h1>My Shopping list</h1>
+
+            <form id="addForm" ng-submit="insert()">
+                <div class="row">
+                    <div class="column">
+                        <span class="spanLabel" ng-show="!minimumCharactersMet()">You need atleast {{howManyMoreCNeed()}} characters more</span>
+                        <span class="spanLabel" ng-show="isNumberOfCharactersWithInTheRange()">Remaining characters : {{howManyCRemaining()}} </span>
+                        <span class="spanLabel warning" ng-show="anyCharactersOver()">{{howmManyCOver()}} characters to many</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="large-8 columns">
+                        <input type="text" name="text" placeholder="Item name..." ng-model="item" ng-trim="false"/>
+                    </div>
+
+                    <div class="large-2 columns">
+                        <input type="text" name="Qty" placeholder="qty..." ng-model="qty" ng-trim="false"/>
+                    </div>
+
+                    <div class="large-2 columns">
+                        <select name="type" ng-model="type">
+                            <option ng-repeat = "type in types" value="{{type.id}}">{{type.name}}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="column">
+
+                        <div class="show-for-medium-up">
+                            <div class="flr">
+                                <button type="button" class="small button primary" ng-click="print()">
+                                    <i class="fa fa-print">Print List</i>
+                                </button>
+
+                                <button type="button" class="small button alert" ng-click="remove()">
+                                    <i class="fa fa-times">Clear Completed</i>
+                                </button>
+
+                            </div>
+
+                            <button type="submit" class="small button" ng-disabled="!submitForm()">
+                                <i class="fa fa-plus">Add</i>
+                            </button>
+
+                            <button type="submit" class="small button secondary" ng-click="clear()">
+                                <i class="fa fa-ban">Clear</i>
+                            </button>
+                        </div>
+
+                        <div class="show-for-small-only">
+                            <ul class="button-group even-4">
+                                <li>
+                                    <button type="submit" class="small button" ng-disabled="!submitForm()">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="submit" class="small button secondary" ng-click="clear()">
+                                        <i class="fa fa-ban"></i>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="small button primary" ng-click="print()">
+                                        <i class="fa fa-print"></i>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="small button alert" ng-click="remove()">
+                                        <i class="fa fa-times"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </form>
+
+            <form action="" id="items">
+
+                <div class="row " ng-repeat="item in items" ng-class="{'done':(item.done==1)}">
+                    <div class="small-8 columns itemName">
+                        <label for="item-{{ item.id }}">
+                            <input type="checkbox" name="item-{{ item.id }}" id="item-{{ item.id }}" ng-change="update(item)"
+                                    ng-model="item.done" ng-true-value=1 ng-false-value=0/> {{item.item}}
+                        </label>
+                    </div>
+
+                    <div class="small-2 columns itemQty">
+                        {{item.qty}}
+                    </div>
+
+                    <div class="small-2 columns itemType">
+                        {{item.type_name}}
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</body>
+</html>
